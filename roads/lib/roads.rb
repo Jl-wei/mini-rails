@@ -2,6 +2,7 @@ require "roads/version"
 require "roads/routing"
 require "roads/util"
 require "roads/dependencies"
+require "roads/controller"
 
 module Roads
   class Error < StandardError; end
@@ -19,13 +20,4 @@ module Roads
     end
   end
 
-  class Controller
-    def initialize(env)
-      @env = env
-    end
-
-    def env
-      @env
-    end
-  end
 end

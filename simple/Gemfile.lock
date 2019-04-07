@@ -1,12 +1,14 @@
 PATH
   remote: ../roads
   specs:
-    roads (0.2.0)
+    roads (0.3.0)
+      erubis
       rack
 
 GEM
   remote: http://rubygems.org/
   specs:
+    erubis (2.7.0)
     rack (2.0.7)
 
 PLATFORMS

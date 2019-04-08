@@ -1,11 +1,9 @@
 module Roads
-  class Application
-    def get_controller_and_action(env)
-      _, cont, action, after = env["PATH_INFO"].split('/', 4)
-      cont = cont.capitalize # "People"
-      cont += "Controller" # "PeopleController"
-
-      [Object.const_get(cont), action]
-    end
+  def self.to_underscore(string)
+    string.gsub(/::/, '/').
+    gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+    gsub(/([a-z\d])([A-Z])/,'\1_\2').
+    tr("-", "_").
+    downcase
   end
 end

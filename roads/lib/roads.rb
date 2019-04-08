@@ -3,6 +3,7 @@ require "roads/routing"
 require "roads/util"
 require "roads/dependencies"
 require "roads/controller"
+require "roads/model"
 
 module Roads
   class Error < StandardError; end
